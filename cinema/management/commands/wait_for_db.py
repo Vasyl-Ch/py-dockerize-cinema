@@ -23,7 +23,8 @@ class Command(BaseCommand):
             except OperationalError as e:
                 if i < max_retries - 1:
                     self.stdout.write(
-                        f"Database unavailable, waiting {retry_delay} second(s)..."
+                        f"Database unavailable, waiting "
+                        f"{retry_delay} second(s)..."
                     )
                     time.sleep(retry_delay)
                     retry_delay *= 2
