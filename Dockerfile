@@ -11,4 +11,4 @@ COPY . .
 
 RUN mkdir -p /app/media/uploads/movies
 
-RUN chown -R 755 /app/media
+RUN chmod -R 755 /app/media

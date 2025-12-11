@@ -3,7 +3,7 @@ services:
     build:
       context: .
     ports:
-      - "8001:8000"
+      - "8000:8000"
     volumes:
       - ./:/app
       - my_media:/app/media
@@ -23,7 +23,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - my_db:$PG_DATA
+      - my_db:/var/lib/postgresql/data
     env_file:
       - .env
 
